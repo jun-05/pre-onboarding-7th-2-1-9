@@ -1,12 +1,21 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from 'react-icons/io';
+import { useParams, useNavigate } from 'react-router-dom';
 
-const Header = ({ title = '전체 차량', $hasBack = false }) => {
+const Header = ({ title = '전체 차량' }) => {
+  const param = useParams();
+  const navigate = useNavigate();
+  const isDetail = param.id;
+
+  const onClickBack = () => {
+    navigate('/');
+  };
+
   return (
     <HeaderWrapper>
       <HeaderContainer>
-        <BackButton $hasBack>
+        <BackButton $hasBack={isDetail !== undefined} onClick={onClickBack}>
           <IoMdArrowRoundBack />
         </BackButton>
         <TitleBlock>{title}</TitleBlock>
