@@ -2,11 +2,11 @@ import React from 'react';
 import tw from 'tailwind-styled-components';
 import NewTagItem from '../common/NewTagItem';
 
-const CarImg = ({ isNew }) => {
+const CarImg = ({ imageUrl, isNew }) => {
   return (
     <CarImgWrapper>
       {isNew && <NewTagItem>NEW</NewTagItem>}
-      <CarImgBlock />
+      <CarImgBlock src={imageUrl} alt="carInfo"></CarImgBlock>
     </CarImgWrapper>
   );
 };
@@ -19,10 +19,9 @@ h-[80px]
 w-[152px]
 `;
 
-const CarImgBlock = tw.div`
+const CarImgBlock = tw.img`
 w-full
 h-full
-bg-gray
 `;
 
 export default CarImg;

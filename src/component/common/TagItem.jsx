@@ -1,8 +1,12 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 
-const TagItem = ({ children, $active = false }) => {
-  return <TagButtonBlock $active={$active}>{children}</TagButtonBlock>;
+const TagItem = ({ children, $active = false, ...rest }) => {
+  return (
+    <TagButtonBlock $active={$active} {...rest}>
+      {children}
+    </TagButtonBlock>
+  );
 };
 
 const TagButtonBlock = tw.button`

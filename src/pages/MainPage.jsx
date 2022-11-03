@@ -1,13 +1,10 @@
 import React from 'react';
-
-import TagList from './../component/main/TagList';
-import CarList from './../component/main/CarList';
+import CarContainer from '../container/main/CarContainer';
 
 const MainPage = () => {
   return (
     <>
-      <TagList />
-      <CarList />
+      <CarContainer />
     </>
   );
 };

@@ -1,11 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import tw from 'tailwind-styled-components';
+import { isNewValidate } from '../../utils/date';
 import CarImg from './CarImg';
 
 //TODO 디폴트값 제거
-const CarItem = ({ brand = '기아', name = 'EV6', segment = 'c', amount = '0', isNew }) => {
+const CarItem = ({ carInfo }) => {
+  const { id, amount, createdAt } = carInfo;
+  const { brand, name, segment, imageUrl } = carInfo.attribute;
+
   return (
-    <CarItemBlock>
+    <CarItemLinkBlock to={`detail/${id}`}>
       <CarInfoWrapper>
         <EmInfoContainer>
           <EmInfo>{brand}</EmInfo>
@@ -18,11 +23,11 @@ const CarItem = ({ brand = '기아', name = 'EV6', segment = 'c', amount = '0', 
         </DefaultInfoContainer>
       </CarInfoWrapper>
 
-      <CarImg isNew={isNew} />
-    </CarItemBlock>
+      <CarImg imageUrl={imageUrl} isNew={isNewValidate(createdAt)} />
+    </CarItemLinkBlock>
   );
 };
-const CarItemBlock = tw.div`
+const CarItemLinkBlock = tw(Link)`
 flex
 items-center
 justify-between
