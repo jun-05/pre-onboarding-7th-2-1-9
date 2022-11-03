@@ -4,20 +4,20 @@ import DetailInfo from './DetailInfo';
 import DetailMainImg from './DetailMainImg';
 import DetailMainInfo from './DetailMainInfo';
 
-const DetailWrapper = () => {
+const DetailWrapper = ({ carInfo }) => {
+  const { brand, name, imageUrl } = carInfo.attribute;
+
   return (
     <DetailWrapperBlock>
-      <DetailMainImg />
-      <DetailMainInfo />
-      <DetailInfo />
+      <DetailMainImg imageUrl={imageUrl} />
+      <DetailMainInfo brand={brand} carName={name} />
+      <DetailInfo carInfo={carInfo} />
     </DetailWrapperBlock>
   );
 };
 const DetailWrapperBlock = tw.div`
-
 flex
 flex-col
-
 `;
 
 export default DetailWrapper;

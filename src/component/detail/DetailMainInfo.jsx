@@ -1,11 +1,11 @@
 import React from 'react';
 import tw from 'tailwind-styled-components';
 
-const MainInfo = () => {
+const MainInfo = ({ brand, carName }) => {
   return (
     <MainInfoBlock>
-      <BrandNameBlock>현대</BrandNameBlock>
-      <CarNameBlock>아반떼</CarNameBlock>
+      <BrandNameBlock>{brand}</BrandNameBlock>
+      <CarNameBlock>{carName}</CarNameBlock>
     </MainInfoBlock>
   );
 };

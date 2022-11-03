@@ -1,10 +1,10 @@
 import React from 'react';
-import DetailWrapper from './../component/detail/DetailWrapper';
+import DetailContainer from './../container/detail/DetailContainer';
 
 const DetailPage = () => {
   return (
     <>
-      <DetailWrapper />
+      <DetailContainer />
     </>
   );
 };
