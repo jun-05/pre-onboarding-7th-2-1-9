@@ -8,6 +8,7 @@ import ErrorPage from './../../pages/ErrorPage';
 const CarContainer = () => {
   const dispatch = useDispatch();
   const { data: carList } = useSelector(state => state.car.carList);
+  const { tagNumber } = useSelector(state => state.tag);
   const {
     data: carItemsWithType,
     isLoading,
@@ -39,7 +40,7 @@ const CarContainer = () => {
   return (
     <>
       <TagList carList={carList} getCarFn={getCarFn} />
-      <CarList carList={isList ? carList : carItemsWithType} isLoading={isLoading} />
+      <CarList carList={tagNumber || !isList ? carItemsWithType : carList} isLoading={isLoading} />
     </>
   );
 };
