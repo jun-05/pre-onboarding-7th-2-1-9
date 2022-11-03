@@ -9,19 +9,19 @@ const NotFoundCar = () => {
   );
 };
 const NotFoundCarBlock = tw.div`
-fixed
-
 flex
-items-center
 justify-center
+items-center
 
-w-screen
-h-screen
+w-full
+h-[120px]
 
-pb-[99px]
+
 
 text-[17px]
 font-bold
+
+overflow-y-hidden
 `;
 
 export default NotFoundCar;
