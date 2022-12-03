@@ -15,10 +15,10 @@ http://wanted-pre-onboarding-fe-7-june.s3-website.ap-northeast-2.amazonaws.com/
 ## 사용 스택
 
 - React JS
-- ContextAPI
+- Redux
+- Redux Thunk
 - TailwindCSS
 - Tailwind-Styled-Component
-- marked / @tailwindcss/typography
 
 ## commit msg 규칙
 
