@@ -1,6 +1,26 @@
-## commit msg 규칙
+# B2C 차량대여 서비스 구축
 
-### 1. 커밋 유형 지정하기
+## 배포 페이지
+
+http://wanted-pre-onboarding-fe-7-june.s3-website.ap-northeast-2.amazonaws.com/
+
+## 요구기능 
+
+공통사항 : Fimga 상의 디자인 및 기능 구현 / 모바일 기준으로 제작
+
+1. 차량 목록 Page 구현
+    - 차량이 없을 경우 / 불러오는 경우 컴포넌트처리
+2. 차량 상세 Page 구현
+
+## 사용 스택
+
+- React JS
+- ContextAPI
+- TailwindCSS
+- Tailwind-Styled-Component
+- marked / @tailwindcss/typography
+
+## commit msg 규칙
 
 ⭐ feat : 새로운 기능에 대한 커밋
 
